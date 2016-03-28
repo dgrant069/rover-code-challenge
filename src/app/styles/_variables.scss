@@ -1,0 +1,30 @@
+// Media Queries
+// $handset-query: ~"screen and (max-width:599px)";
+// $tablet-query: ~"screen and (min-width:600px) and (max-width:1024px)";
+// $desktop-query: ~"screen and (min-width:1025px)";
+
+// colors
+$primary-color: #fff;
+$secondary-color: #eee;
+
+// spacing
+$header-height: 60px;
+$full-space: 40px;
+$half-space: 20px;
+
+// font sizing
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 16px;
+$font-size-lg: 24px;
+$font-size-xl: 32px;
+$title-text-size: 40px;
+$common-text-size: $font-size-sm;
+
+// Shared elements
+$border-radius: 10px;
+$border: 1px solid black;
+$min-padding: 8px;
+$handset-padding: 8px;
+$tablet-padding: 12px;
+$desktop-padding: 16px;
