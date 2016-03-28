@@ -1,30 +1,81 @@
-/**
- *  If you want to override some bootstrap variables, you have to change values here.
- *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
- */
-$navbar-inverse-link-color: #5AADBB;
-$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+/** App css variables */
+// Media Queries
+// $handset-query: ~"screen and (max-width:599px)";
+// $tablet-query: ~"screen and (min-width:600px) and (max-width:1024px)";
+// $desktop-query: ~"screen and (min-width:1025px)";
 
-@import 'reset';
-@import 'variables';
-// @import 'colors';
-// @import 'fonts';
-// @import 'mixins';
+// colors
+$primary-color: #77C045;
+$secondary-color: #2490B3;
 
-// Font Awesome
-// @import '/vendor/components-font-awesome/less/font-awesome.less';
+// spacing
+$header-height: 60px;
+$full-space: 40px;
+$half-space: 20px;
 
-// Import from views
+// font sizing
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 16px;
+$font-size-lg: 24px;
+$font-size-xl: 32px;
+$title-text-size: 40px;
+$common-text-size: $font-size-sm;
 
-// Import from components
+// Shared elements
+$border-radius: 10px;
+$border: 1px solid black;
+$min-padding: 8px;
+$handset-padding: 8px;
+$tablet-padding: 12px;
+$desktop-padding: 16px;
 
-/**
- *  Do not remove the comments below. It's the markers used by wiredep to inject
- *  sass dependencies when defined in the bower.json of your dependencies
- */
-// bower:scss
-// endbower
+/** Reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
+/** Custom css */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -42,6 +93,18 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 
 body {
   font-family: Helvetica, sans-serif;
+}
+
+header, .app-header {
+    height: $header-height;
+    width: 100%;
+    background-color: white;
+}
+
+.app {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .app-wrapper {
@@ -118,10 +181,3 @@ body {
     width: 100%;
     cursor: pointer;
 }
-
-/**
- *  Do not remove the comments below. It's the markers used by gulp-inject to inject
- *  all your sass files automatically
- */
-// injector
-// endinjector@import 'reset';

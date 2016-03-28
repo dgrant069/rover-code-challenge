@@ -1,15 +1,16 @@
 angular
     .module('dogbook')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('navbar', navbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function navbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/directives/navbar/navbar.html',
       scope: {
           creationDate: '='
       },
+      link: linkFunction,
       controller: NavbarController,
       controllerAs: 'vm',
       bindToController: true
@@ -18,6 +19,10 @@ angular
     return directive;
 
     /** @ngInject */
+    function linkFunction(scope, elem, log) {
+      console.log("test link funciton", scope);
+    }
+
     function NavbarController(moment) {
       var vm = this;
 
