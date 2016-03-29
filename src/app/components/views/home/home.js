@@ -3,10 +3,9 @@
     .controller('HomeController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, toastr, DogsDataFactory, $log, $scope) {
-    var vm = this;
+  function MainController($timeout, DogsDataFactory, $log, $scope) {
     $scope.dogsArray = [];
-
+    $scope.type = 'grid';
     init();
 
     function init() {
@@ -19,5 +18,9 @@
 
         }
       )
+    }
+
+    $scope.toggle = function(type) {
+      $scope.type = type;
     }
   }

@@ -9,7 +9,8 @@ angular.module('dogbook', [
     'ngResource',
     'ui.router',
     'ui.bootstrap',
-    'toastr'
+    'toastr',
+    'angularModalService'
 ])
 .constant('malarkey', malarkey)
 .constant('moment', moment)

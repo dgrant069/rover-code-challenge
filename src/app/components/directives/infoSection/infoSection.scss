@@ -1,4 +1,4 @@
-.info-section {
+.grid {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -6,22 +6,18 @@
     flex-flow: wrap;
 
     .tile-wrapper {
-        .dog-image-wrapper {
-            height: 160px;
-            width: 280px;
-            border-radius: $border-radius;
-        }
-    }
-}
-
-.grid {
-    .tile-wrapper {
         margin: $tablet-padding $handset-padding;
         cursor: pointer;
         position: relative;
         box-sizing: border-box;
         border-radius: $border-radius;
         box-shadow: 0px 5px 5px #888888;
+
+        .dog-image-wrapper {
+            height: 160px;
+            width: 280px;
+            border-radius: $border-radius;
+        }
 
         .dog-information-wrapper {
             position: absolute;
@@ -51,39 +47,60 @@
 }
 
 .list {
+    margin: $tablet-padding auto;
+    width: 400px;
+    display: block;
+    position: relative;
+
     .tile-wrapper {
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-between;
-        // align-items: center;
-        // align-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: center;
+        border: black solid 1px;
+        border-radius: $border-radius;
+        margin-bottom: 2*$desktop-padding;
+        box-shadow: 0px 5px 5px #888888;
+        background-color: #FFFFFF;
+        height: 152px;
+        width: 100%;
 
         .dog-image-wrapper {
-            // order: 1;
-
-            img {
-
-            }
+            order: 1;
+            height: 150px;
+            width: 150px;
+            margin-right: $desktop-padding;
+            border-radius: $border-radius 0 0 $border-radius
         }
 
         .dog-information-wrapper {
-            // order: 2;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: space-between;
-            // align-items: center;
-            // align-content: center;
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            align-content: center;
+            width: 234px;
+            height: 150px;
+            padding-top: $tablet-padding;
 
             .dog-name {
-                // order: 1;
+                order: 1;
+                color: $primary-text;
+                font-size: $font-size-lg;
             }
 
             .dog-owner-info {
-                // order: 2;
+                order: 2;
+                color: $secondary-text;
+                font-size: $font-size-md;
             }
 
             .dog-button {
-                // order: 3;
+                order: 3;
+                width: 150px;
+                margin-bottom: $tablet-padding;
             }
         }
     }

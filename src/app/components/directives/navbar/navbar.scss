@@ -21,21 +21,27 @@
 
         .nav-brand {
             order: 1;
+            margin-right: $tablet-padding;
         }
 
         .nav-search {
             order: 2;
-            max-width: 180px;
 
             .search-bar {
-                background: url(assets/images/search.png) no-repeat scroll 2px 2px;
+                background: url(assets/images/search.png) no-repeat scroll 4px 5px;
                 padding-left:30px;
-                max-width: inherit;
+                max-width: 180px;
+                line-height: 26px;
+                border-radius: $border-radius;
             }
         }
     }
 
     .button-wrapper {
         order: 2;
+
+        .add-dog {
+            font-size: $font-size-md;
+        }
     }
 }

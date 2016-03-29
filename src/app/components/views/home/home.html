@@ -4,6 +4,10 @@
   </header>
 
   <section class="main-wrapper">
-    <info-section dogs-list="dogsArray"></info-section>
+    <div class="toggle-view-wrapper">
+      <span class="toggle button" ng-click="toggle('grid')">Grid View</span>
+      <span class="toggle button" ng-click="toggle('list')">List View</span>
+    </div>
+    <info-section dogs-list="dogsArray" type="type"></info-section>
   </section>
 </div>

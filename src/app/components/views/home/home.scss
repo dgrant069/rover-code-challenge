@@ -1,0 +1,10 @@
+.toggle-view-wrapper {
+    text-align: center;
+
+    .toggle {
+        display: inline-block;
+        max-width: 200px;
+        margin-left: $min-padding;
+        margin-right: $min-padding;
+    }
+}
