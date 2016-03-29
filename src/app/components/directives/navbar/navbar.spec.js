@@ -1,18 +1,10 @@
-(function() {
-  'use strict';
-
-  /**
-   * @todo Complete the test
-   * This example is not perfect.
-   * Test should check if MomentJS have been called
-   */
-  describe('directive navbar', function() {
+describe('directive navbar', function() {
     // var $window;
     var vm;
     var el;
     var timeInMs;
 
-    beforeEach(module('tempCopy'));
+    beforeEach(module('dogbook'));
     beforeEach(inject(function($compile, $rootScope) {
       // spyOn(_$window_, 'moment').and.callThrough();
       // $window = _$window_;
@@ -41,10 +33,4 @@
       expect(vm.relativeDate).toEqual(jasmine.any(String));
       expect(vm.relativeDate).toEqual('a day ago');
     });
-
-    // it('should call Moment', function() {
-    //   console.log($window.moment)
-    //   expect($window.moment).toHaveBeenCalled();
-    // });
   });
-})();

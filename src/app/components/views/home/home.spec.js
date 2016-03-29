@@ -1,12 +1,9 @@
-(function() {
-  'use strict';
-
-  describe('controllers', function(){
+describe('controllers', function(){
     var vm;
     var $timeout;
     var toastr;
 
-    beforeEach(module('tempCopy'));
+    beforeEach(module('dogbook'));
     beforeEach(inject(function(_$controller_, _$timeout_, _webDevTec_, _toastr_) {
       spyOn(_webDevTec_, 'getTec').and.returnValue([{}, {}, {}, {}, {}]);
       spyOn(_toastr_, 'info').and.callThrough();
@@ -36,4 +33,3 @@
       expect(vm.awesomeThings.length === 5).toBeTruthy();
     });
   });
-})();

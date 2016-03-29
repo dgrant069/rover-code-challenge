@@ -4,16 +4,20 @@
 // $tablet-query: ~"screen and (min-width:600px) and (max-width:1024px)";
 // $desktop-query: ~"screen and (min-width:1025px)";
 
-// colors
+// Colors
 $primary-color: #77C045;
-$secondary-color: #2490B3;
+$secondary-color: #EAEEEF;
+$primary-text: #2490B3;
+$secondary-text: #999999;
 
-// spacing
+
+// Spacing
+$max-app-width: 1200px;
 $header-height: 60px;
 $full-space: 40px;
 $half-space: 20px;
 
-// font sizing
+// Font sizing
 $font-size-xs: 10px;
 $font-size-sm: 12px;
 $font-size-md: 16px;
@@ -23,7 +27,7 @@ $title-text-size: 40px;
 $common-text-size: $font-size-sm;
 
 // Shared elements
-$border-radius: 10px;
+$border-radius: 5px;
 $border: 1px solid black;
 $min-padding: 8px;
 $handset-padding: 8px;
@@ -49,7 +53,6 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -103,13 +106,15 @@ header, .app-header {
 
 .app {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: $secondary-color;
 }
 
-.app-wrapper {
-    // min-height: 600px;
-    // height: auto;
+.main-wrapper {
+    max-width: $max-app-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $min-padding;
+    padding-left: $min-padding;
     position: relative;
     padding-bottom: $min-padding;
     bottom: 0;

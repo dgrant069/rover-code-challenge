@@ -1,0 +1,13 @@
+<section class="info-section" ng-class="viewType">
+  <div class="tile-wrapper" id="dog-{{ dog.name }}" ng-repeat="dog in dogsList | orderBy:'rank'">
+
+      <img class="dog-image-wrapper" ng-src="{{ dog.image }}" alt="{{ dog.name }}">
+
+      <div class="dog-information-wrapper">
+        <h3 class="dog-name">{{ dog.name }}</h3>
+        <p class="dog-owner-info">{{ dog.owner }} - {{ dog.city }}</p>
+        <button class="dog-button">View Dog Info</button>
+      </div>
+
+  </div>
+</section>

@@ -1,7 +1,4 @@
-(function() {
-  'use strict';
-
-  describe('service githubContributor', function() {
+describe('service githubContributor', function() {
     var githubContributor;
     var $httpBackend;
     var $log;
@@ -59,4 +56,3 @@
       });
     });
   });
-})();

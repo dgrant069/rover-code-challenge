@@ -1,7 +1,9 @@
 .header-nav {
-    max-width: 1200px;
+    max-width: $max-app-width;
     margin-left: auto;
     margin-right: auto;
+    padding-right: $desktop-padding;
+    padding-left: $desktop-padding;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
