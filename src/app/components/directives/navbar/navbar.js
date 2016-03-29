@@ -15,6 +15,6 @@ angular
 
     /** @ngInject */
     function linkFunction(scope, elem, log) {
-      console.log("nav scope", scope);
+
     }
   }

@@ -27,8 +27,9 @@ angular
           getDogsCollectionFailed(networkError);
 
           var dogsCache = $window.localStorage.getItem("dogs-list");
-          if(!dogsCache) {
-            deferred.resolve(JSON.stringify(dogsCache));
+          // console.log(dogsCache);
+          if(!!dogsCache) {
+            deferred.resolve(dogsCache);
           } else {
             deferred.reject({
                 statusText: 'Get call failed due to: ' + networkStatus,

@@ -1,12 +1,12 @@
 <section class="info-section" ng-class="viewType">
-  <div class="tile-wrapper" id="dog-{{ dog.name }}" ng-repeat="dog in dogsList | orderBy:'rank'">
+  <div class="tile-wrapper" id="dog-{{ dog.name }}" ng-repeat="dog in dogsList track by $index">
 
       <img class="dog-image-wrapper" ng-src="{{ dog.image }}" alt="{{ dog.name }}">
 
       <div class="dog-information-wrapper">
         <h3 class="dog-name">{{ dog.name }}</h3>
         <p class="dog-owner-info">{{ dog.owner }} - {{ dog.city }}</p>
-        <div class="dog-button button">View Dog Info</button>
+        <div class="dog-button button" ng-if="type === 'list'">View Dog Info</button>
       </div>
 
   </div>

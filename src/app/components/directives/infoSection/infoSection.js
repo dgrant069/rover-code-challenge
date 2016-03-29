@@ -11,32 +11,28 @@ angular
           dogsList: '=',
           type: '='
       },
+      controller: controllerFunction,
+      controllerAs: 'vm',
       link: linkFunction
     };
 
     return directive;
 
     /** @ngInject */
-    function linkFunction(scope, elem, log, ModalService) {
+    function linkFunction(scope, elem, log, ctrl) {
       console.log("info section scope", scope);
+      console.log("info section ctrl", ctrl);
       scope.$watch('type', function(newVal, oldVal) {
         scope.viewType = newVal;
       });
+    }
 
-      scope.showModal = function() {
-          ModalService.showModal({
-              templateUrl: 'modal.html',
-              controller: "ModalController"
-          }).then(function(modal) {
-              modal.element.modal();
-              modal.close.then(function(result) {
-                  scope.message = "You said " + result;
-              });
-          });
-      };
+    /** @ngInject */
+    function controllerFunction($scope){
+      var vm = this;
 
-      scope.closeModal = function() {
-
+      vm.filter = function(text) {
+        $scope.dogFilter = text;
       }
     }
   }

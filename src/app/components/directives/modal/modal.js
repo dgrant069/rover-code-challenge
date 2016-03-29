@@ -1,20 +1,18 @@
 angular.module('dogbook')
   .controller('ModalCtrl', function ($scope, $uibModal, $log) {
 
-    $scope.items = ['item1', 'item2', 'item3'];
-
     $scope.animationsEnabled = true;
 
-    $scope.open = function (size) {
+    $scope.open = function (dog) {
+      $scope.dogInfo = dog;
 
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,
-        templateUrl: 'myModalContent.html',
+        templateUrl: 'app/components/directives/modal/modal.html',
         controller: 'ModalInstanceCtrl',
-        size: size,
         resolve: {
-          items: function () {
-            return $scope.items;
+          dogInfo: function () {
+            return $scope.dogInfo;
           }
         }
       });
@@ -35,16 +33,9 @@ angular.module('dogbook')
 angular.module('dogbook')
   .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
 
-    $scope.items = items;
-    $scope.selected = {
-      item: $scope.items[0]
-    };
+    $scope.dogInfo = dogInfo;
 
     $scope.ok = function () {
-      $uibModalInstance.close($scope.selected.item);
-    };
-
-    $scope.cancel = function () {
-      $uibModalInstance.dismiss('cancel');
+      $uibModalInstance.close();
     };
   });
